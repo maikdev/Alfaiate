@@ -42,9 +42,52 @@ class HomeController extends Controller
     	$posts = Post::orderBy('created_at', 'desc')->paginate(5);
     
     
-    	return view('welcome', [
-    			'posts' => $posts,
-    	]);
+//     	return view('bar', [
+//     			'posts' => $posts,
+//     	]);
+
+    	$title = "O'Alfaiate";
+    	$logo_image = asset ( '/logo.png' );
+    	$fondo_image = asset ( '/img/alfaiate_fondo1.jpg' );
+    	$logo_frase = "Un lugar onde falar...";
+    	
+    	$fondo_temazos = asset ( '/img/bar/fondo_eventos.jpg' );
+    	$fondo_eventos = asset ( '/img/bar/fondo_eventos.jpg' );
+    	
+    	$video1 = ['link' => 'https://www.youtube-nocookie.com/embed/WXT6rIgu65o?rel=0',
+    			'titulo'=>'tit',
+    			'texto' => 'texto'
+    	];
+    	
+    	$videos = [];
+    	
+    	array_push($videos, $video1);
+    	array_push($videos, $video1);
+    	array_push($videos, $video1);
+    	
+    	
+    	
+    	$fondo_multimedia = asset ( '/img/bar/fondo_multimedia.jpg' );
+    	
+    	$concierto1 = [
+    			'imagen' => asset ( '/img/negadeth/cso.jpg' ),
+    			'titulo'=>'Directo Potente',
+    			'texto' => '',
+    			'lugar'=>'CSO Palavea',
+    			'fecha' => '05/05/2012'
+    	];
+    	
+    	$conciertos = [];
+    	array_push($conciertos, $concierto1);
+    	array_push($conciertos, $concierto1);
+    	array_push($conciertos, $concierto1);
+    	
+    	
+    	//$tipo='elmaster  masthead-stacked';
+    	$tipo='masthead-inline';
+    	
+    	return view ( 'bar', compact ( 'tipo', 'title', 'logo_image', 'fondo_image', 'logo_frase', 'fondo_temazos',
+    			'fondo_eventos', 'videos', 'fondo_multimedia', 'conciertos' ) );
     }
     
     /**
