@@ -1,7 +1,23 @@
-<!-- conciertos -->
+@extends('layouts/ethos') 
 
+@section('menubar')
+	@include('bar.partials.menubar_second')
+@stop
 
-<div id="videos"
+@section('header')
+	
+	@include('bar.partials.header')
+	
+@stop
+
+@section('footer')
+	@include('bar.partials.footer')
+@stop
+
+@section('content')
+	
+	
+	<div id="videos"
 	class="x-content-band text-white center-text bg-image parallax man"
 	data-x-element="content_band"
 	data-x-params='
@@ -11,10 +27,10 @@
 
 	
 	<div class="x-container max width" style="margin-top: 100px; margin-bottom:20px">
-		<a href="{!! route('fotos') !!}"><h2 class="h-custom-headline h2"
+		<h2 class="h-custom-headline h2"
 			style="background-color: #000000; padding-top: 5px; padding-bottom: 5px; margin-top: 0px;">
 			<span>Multimedia</span>
-		</h2></a>
+		</h2>
 		
 		
 	</div>
@@ -47,4 +63,14 @@
 		@endforeach		
 
 	</div>
-</div>
+</div> 
+
+@stop 
+
+@section('scripts') 
+
+@stop
+
+@section('styles') 
+
+@stop

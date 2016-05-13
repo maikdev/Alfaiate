@@ -27,7 +27,13 @@
 
 Route::group(['middleware' => 'web'], function () {
 	//Route::get('/', '\Maiklez\MaikBlog\Http\Controllers\MaikBlogController@blogView');
-	Route::get('/', 'HomeController@welcome');
+	Route::get('/', 'HomeController@welcome')->name('index');
+	
+	Route::get('fiestas/', 'HomeController@getEventos')->name('fiestas');
+	Route::get('fiestas/{id}', 'HomeController@getEvento')->name('the_fiesta');
+	
+	Route::get('fotos/', 'HomeController@getAlbumes')->name('fotos');
+	Route::get('fotos/{id}', 'HomeController@getAlbum')->name('the_fotos');
 	
 	Route::get('blog/{slug}/', 'HomeController@the_post')->name('the_post');
 	

@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+
+/* Alerts */
+	.alert { margin-bottom: 30px; padding: 20px 55px 20px 90px; position: relative; -webkit-border-radius: 5px; border-radius: 5px; }
+	.alert2 { 
+		position: fixed;
+	   right: 25px;
+	   top: 15px;
+	   
+	   padding: 15px 15px 15px 30px;
+	   -webkit-border-top-right-radius: 5px;
+	   -moz-border-radius: 5px;
+	   border-radius: 5px;
+	   background-repeat: no-repeat;
+	   background-position: 7px center;
+	   opacity: 0.95;
+	   filter: alpha(opacity=95);
+	   vertical-align: middle;
+	   
+    
+	}
+	
+	body {
+    	background-color: #CACACA;
+	}
+	#footer{
+		background-color: #eddbc3;
+		padding-top: 25px;
+	    padding-bottom: 25px;
+	    font-family: Ubuntu Mono;
+    	font-size: 19px;
+	}	
+	
+	.text-muted, .text-muted a{
+    	color: #000;
+	}
+	.navbar-default {
+	    background-color: #eddbc3;
+	    border-color: #0F0E0E;
+	    border-top-color: #eddbc3;
+	    border-left: none;
+	    border-right: none;
+	    border-radius: 0px;
+	}
+	.navbar-default .navbar-nav>li>a {
+	    color: #000000;
+	    font-family: Ubuntu Mono;
+	    font-size: 19px;
+	}
+	.logo {
+	    
+	    padding: 15px 20px;
+	    text-indent: -3000px;
+    }
+    
+    @media (min-width: 768px){
+		.navbar-nav {
+		    margin-left: 20px;
+		}
+	}
+
+    @media only screen and (max-width: 768px) {
+	    .logo {
+		    margin-left: 5px;
+		    margin-top: 5px;
+	    }
+    }
+    
+    .panel-post{
+        border-radius: 0px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, .50);
+        border: none;
+    }
+    .panel-post .panel-heading {
+    	background-color: #F5A142;
+    	border-top-left-radius: 0px;
+    	border-top-right-radius: 0px;
+    	color: white;
+    	font-family: Ubuntu Mono;
+    	font-size: 17px;
+    	font-weight: bold;
+    }
+    
+    .panel-post .panel-body h2{
+    	margin-top: 5px;
+    	font-family: Bangers;
+    }
+    .panel-post .post-tags{
+        
+        color: #7A0000;
+        font-weight: bold;
+    }
+    .panel-post .post-published{
+        margin-bottom: 25px;
+        color: #7A0000;
+        font-weight: bold;
+    }
+    .panel-post .post-body{
+    	font-family: 'Roboto', sans-serif;
+    }
+    
+    pre.prettyprint {
+    	font-family: Ubuntu Mono;
+    	font-size: 16px;
+	}
+	.terminal::before { 
+    content: "maik@rocks:~$ ";
+	}
+	.terminal, .terminal2{
+		font-family: Ubuntu Mono;
+	    background-color: #000000;
+	    color: #15C701;
+		padding-top:3px;
+		padding-bottom: 3px;
+		padding-left: 5px;
+		padding-right: 10px;
+	}
+	
+    
+    .maik-code {
+	    font-family: Ubuntu Mono;
+	    border: 1px solid #A2A2A2;
+	    background-color: #F1F1F1;
+	    margin: 10px;
+	    color: #0150c7;
+	    overflow: auto;
+	}
+	
+	.image-card{
+		
+	}

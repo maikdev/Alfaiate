@@ -9,6 +9,8 @@ use Maiklez\MaikBlog\Models\Category;
 use Maiklez\MaikBlog\Models\Tag;
 
 use Auth;
+use Maiklez\Multimedia\Models\Evento;
+use Maiklez\Multimedia\Models\Album;
 
 class HomeController extends Controller
 {
@@ -39,55 +41,127 @@ class HomeController extends Controller
      */
     public function welcome()
     {
-    	$posts = Post::orderBy('created_at', 'desc')->paginate(5);
+    	//$posts = Post::orderBy('created_at', 'desc')->paginate(5);
     
-    
+    	$evento = Evento::orderBy('fecha_inicio', 'desc')->first();
 //     	return view('bar', [
 //     			'posts' => $posts,
 //     	]);
 
-    	$title = "O'Alfaiate";
+    	$title = "O Alfaiate";
     	$logo_image = asset ( '/logo.png' );
     	$fondo_image = asset ( '/img/alfaiate_fondo1.jpg' );
     	$logo_frase = "Un lugar onde falar...";
     	
-    	$fondo_temazos = asset ( '/img/bar/fondo_eventos.jpg' );
-    	$fondo_eventos = asset ( '/img/bar/fondo_eventos.jpg' );
-    	
-    	$video1 = ['link' => 'https://www.youtube-nocookie.com/embed/WXT6rIgu65o?rel=0',
-    			'titulo'=>'tit',
-    			'texto' => 'texto'
-    	];
-    	
-    	$videos = [];
-    	
-    	array_push($videos, $video1);
-    	array_push($videos, $video1);
-    	array_push($videos, $video1);
+    	$fondo_ubicacion = asset ( '/img/fondo2.jpg' );
+    	$fondo_eventos = asset ( '/img/alfaiate_paredchica.jpg' );
     	
     	
     	
-    	$fondo_multimedia = asset ( '/img/bar/fondo_multimedia.jpg' );
+    	$albumes = Album::where('publicar', 1)->limit(6)->get();
     	
-    	$concierto1 = [
-    			'imagen' => asset ( '/img/negadeth/cso.jpg' ),
-    			'titulo'=>'Directo Potente',
-    			'texto' => '',
-    			'lugar'=>'CSO Palavea',
-    			'fecha' => '05/05/2012'
-    	];
+
+    	$fondo_multimedia = asset ( '/img/alfaiate_paredrevistas.jpg' );
     	
-    	$conciertos = [];
-    	array_push($conciertos, $concierto1);
-    	array_push($conciertos, $concierto1);
-    	array_push($conciertos, $concierto1);
-    	
+    	    	
     	
     	//$tipo='elmaster  masthead-stacked';
     	$tipo='masthead-inline';
     	
-    	return view ( 'bar', compact ( 'tipo', 'title', 'logo_image', 'fondo_image', 'logo_frase', 'fondo_temazos',
-    			'fondo_eventos', 'videos', 'fondo_multimedia', 'conciertos' ) );
+    	return view ( 'bar', compact ( 'tipo', 'title', 'evento','logo_image', 'fondo_image', 'logo_frase', 'fondo_ubicacion',
+    			'fondo_eventos', 'albumes', 'fondo_multimedia' ) );
+    }
+    
+    /**
+     * Show the eventos.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getEventos()
+    {
+
+    	$eventos = Evento::orderBy('fecha_inicio', 'desc')->get();
+    
+    	$title = "O Alfaiate";
+    	$logo_image = asset ( '/logo.png' );
+    	
+    	
+    	$fondo_eventos = asset ( '/img/alfaiate_paredchica.jpg' );
+
+    	//$tipo='elmaster  masthead-stacked';
+    	$tipo='masthead-inline';
+    	 
+    	return view ( 'bar.eventos.eventos', compact ( 'tipo', 'title', 'eventos','logo_image',
+    			'fondo_eventos' ) );
+    }
+    
+    /**
+     * Show the eventos.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getEvento($id)
+    {
+    
+    	$evento = Evento::find($id);
+    
+    	$title = "O Alfaiate";
+    	$logo_image = asset ( '/logo.png' );
+    	 
+    	 
+    	$fondo_eventos = asset ( '/img/alfaiate_paredchica.jpg' );
+    
+    	//$tipo='elmaster  masthead-stacked';
+    	$tipo='masthead-inline';
+    
+    	return view ( 'bar.eventos.evento', compact ( 'tipo', 'title', 'evento','logo_image',
+    			'fondo_eventos' ) );
+    }
+    
+    /**
+     * Show the albumes.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getAlbumes()
+    {
+    	
+    	$title = "O Alfaiate";
+    	$logo_image = asset ( '/logo.png' );
+
+    	$albumes = Album::where('publicar', 1)->get();
+    	 
+    
+    	$fondo_multimedia = asset ( '/img/alfaiate_paredrevistas.jpg' );
+
+    	//$tipo='elmaster  masthead-stacked';
+    	$tipo='masthead-inline';
+    	 
+    	return view ( 'bar.albumes.albumes', compact ( 'tipo', 'title', 'logo_image',
+    			'albumes', 'fondo_multimedia' ) );
+    }
+    
+    /**
+     * Show the albumes.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getAlbum($id)
+    {
+    	 
+    	$title = "O Alfaiate";
+    	$logo_image = asset ( '/logo.png' );
+    
+    	$album = Album::find($id);
+    
+    
+    	$fondo_multimedia = asset ( '/img/alfaiate_paredrevistas.jpg' );
+    
+    	//$tipo='elmaster  masthead-stacked';
+    	$tipo='masthead-inline';
+    
+    	return view ( 'bar.albumes.album', compact ( 'tipo', 'title', 'logo_image',
+    			'album', 'fondo_multimedia' ) );
     }
     
     /**
@@ -104,48 +178,5 @@ class HomeController extends Controller
     			'post' => $post,
     			'comments' => $post->comments,
     	]);
-    }
-    
-    /**
-     * Create a new task.
-     *
-     * @param  Request  $request
-     * @return Response
-     */
-    public function store(Request $request)
-    {
-    	$this->authorize('blog',  Auth::user());
-    
-    	$this->validate($request, Post::storeRules());
-    
-    	$this->validate($request, Category::storeRules());
-    	$this->validate($request, Tag::storeRules());
-    	
-    	\DB::transaction(function () use ($request){
-    		$post = Post::create(Post::storeAttributes($request));
-    		
-    		$categories = explode(',', $request->categories);
-    		// remove empty items from array
-    		$categories = array_filter($categories);
-    		// trim all the items in array
-    		$categories =array_map('trim', $categories);
-    		
-    		$post->saveCategories($categories);   		 
-    		
-    		$tags = explode(',', $request->tags);
-    		
-    		// remove empty items from array
-    		$tags = array_filter($tags);
-    		// trim all the items in array
-    		$tags =array_map('trim', $tags);
-    		
-    		$post->saveTags($tags);
-    		    		
-    		
-    	});
-    	
-    
-    
-    	return redirect(route('blog'));
     }
 }

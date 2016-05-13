@@ -11,8 +11,9 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand logo" href="{{ url('/') }}">
-                    MAik.rocks
+                <a class="logo navbar-brand " href="{{ url('/') }}">
+                    <img class="logo" alt="" src="{!! asset('/logo.png')!!}" style=" position: absolute; height: 90px;  margin-top: -30px;">
+                    O'Alfaiate
                 </a>
             </div>
 

@@ -12,8 +12,8 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <meta name="google-site-verification"
-	content="YmiMISgP5jLWVWMIc-Ay2XpEhMH9PTdafv8EdeajB9M" />
-
+	content="" />
+<link rel="icon" href="{!! asset('favicon.ico') !!}" />
 
 <link rel='stylesheet' id='rs-plugin-settings-css'
 	href="{!! asset('/css/renew/settings.css?ver=4.6.93') !!}"
@@ -21,7 +21,9 @@
 
 @yield('style_plugin')
 
-
+<link rel='stylesheet' id='x-fa-icon-classes-css'
+	href="{!! asset('/css/thecss.css') !!}"
+	type='text/css' media='all' />
 
 <link rel='stylesheet' id='x-fa-icon-classes-css'
 	href="{!! asset('/css/renew/fa-icon-classes.css?ver=1.0.3') !!}"
@@ -47,12 +49,11 @@
 <link rel='shortlink' href='http://www.rodafresh.com' />
 
 
-<meta property="og:site_name" content="Rodafresh.com">
-<meta property="og:title" content="Home">
-<meta property="og:description" content="Rodafresh.com">
+<meta property="og:site_name" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
 <meta property="og:image" content="">
-<meta property="og:url" content="http://www.rodafresh.com">
-<meta property="og:type" content="article">
+<meta property="og:url" content="">
 
 @yield('style_custom')
 </head>
@@ -65,11 +66,7 @@
 
 	<script type='text/javascript'
 		src="{!! asset('/js/renew/jquery.form.min.js?ver=3.51.0-2014.06.20') !!}"></script>
-	<script type='text/javascript'>
-/* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/theme.co\/x\/demo\/renew\/2\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
-/* ]]> */
-</script>
+	
 	<script type='text/javascript'
 		src="{!! asset('/js/renew/scripts.js?ver=4.1.2') !!}"></script>
 	<script type='text/javascript'

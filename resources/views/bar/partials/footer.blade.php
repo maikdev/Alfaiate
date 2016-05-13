@@ -1,18 +1,18 @@
 <footer class="x-colophon bottom" role="contentinfo">
 	<div class="x-container max width">
-		<div class="x-colophon-content text-white">
+		<div class=" text-white">
             <p class="man"></p>
             
             <hr  class="x-gap" style="margin: 20px 0 0 0;">
             
             <p style="letter-spacing: 2px; text-transform: uppercase;">
-            MaikBar.es Copyright 2015 ©. Powered By
-             <a href="http://maik.rocks/maikpage/" title="The Galician Team">MAik</a></p>
+            OAlfaiate.es Copyright 2016 ©. Powered By
+             <a href="http://maik.rocks/" title="MAik.rocks">MAik.rocks</a></p>
         </div>
         
         
         <div class="x-social-global">
-	        <a href="#" class="facebook" title="Facebook" target="_blank">
+	        <a href="https://www.facebook.com/francisco.barcia" class="facebook" title="Facebook" target="_blank">
 	        	<i class="x-icon-facebook-square" data-x-icon="&#xf082;"></i></a>
 	        	
 	        <a href="#" class="twitter" title="Twitter" target="_blank">

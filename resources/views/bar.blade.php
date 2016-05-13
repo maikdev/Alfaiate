@@ -18,9 +18,7 @@
 	
 	
 	@include('bar.partials.animated_intro')
-	
-	@include('bar.temazos')	
-	
+		
 	@include('bar.eventos')	
 	
 	@include('bar.multimedia')

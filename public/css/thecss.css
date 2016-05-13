@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+.eventtext p {
+	font-weight: 600;
+    font-size: large;
+}

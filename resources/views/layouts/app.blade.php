@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>MAik.rocks @yield('title')</title>
-	<meta name="description" content="MAik.rocks, un blog de técnologia, programación, arduino y mucho más">
+    <title>O'Alfaiate @yield('title')</title>
+	<meta name="description" content="O'Alfaiate, A Coruña. Un lugar onde falar...">
 	<meta name="keywords" content="@yield('keywords') ">
 		
 	{!! Html::favicon('favicon.ico') !!}
@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     
-    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/admin.css') }}" rel="stylesheet">
     
     {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
     
