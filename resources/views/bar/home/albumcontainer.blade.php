@@ -11,7 +11,7 @@
 	<span>{!! $album->title !!}</span>
 </h3></a>
 <hr class="x-gap" style="margin: 15px 0 0 0;">
-<div style="font-weight: 600;font-size: medium;">{!! $album->texto_h !!}
+<div class="eventtext">{!! $album->texto_h !!}
 </div>
 
 <p>

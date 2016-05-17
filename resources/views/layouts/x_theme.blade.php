@@ -15,38 +15,26 @@
 	content="" />
 <link rel="icon" href="{!! asset('favicon.ico') !!}" />
 
-<link rel='stylesheet' id='rs-plugin-settings-css'
-	href="{!! asset('/css/renew/settings.css?ver=4.6.93') !!}"
-	type='text/css' media='all' />
-
+<link rel='stylesheet' id='rs-plugin-settings-css'	href="{!! asset('/css/renew/settings.css?ver=4.6.93') !!}"	type='text/css' media='all' />
+	
 @yield('style_plugin')
+<link rel='stylesheet'	href="{!! asset('/css/thecss.css') !!}"	type='text/css' media='all' />
 
 <link rel='stylesheet' id='x-fa-icon-classes-css'
-	href="{!! asset('/css/thecss.css') !!}"
-	type='text/css' media='all' />
+	href="{!! asset('/css/renew/fa-icon-classes.css?ver=1.0.3') !!}" type='text/css' media='all' />
 
-<link rel='stylesheet' id='x-fa-icon-classes-css'
-	href="{!! asset('/css/renew/fa-icon-classes.css?ver=1.0.3') !!}"
-	type='text/css' media='all' />
 <link rel='stylesheet' id='x-demos-stacks-css'
-	href="{!! asset('/css/renew/style.css') !!}" type='text/css'
-	media='screen' />
+	href="{!! asset('/css/renew/style.css') !!}" type='text/css' media='screen' />
 
-<script type='text/javascript'
-	src="{!! asset('/js/renew/jquery.js?ver=1.11.2') !!}"></script>
-<script type='text/javascript'
-	src="{!! asset('/js/renew/jquery-migrate.min.js?ver=1.2.1') !!}"></script>
-<script type='text/javascript'
-	src="{!! asset('/js/renew/jquery.themepunch.tools.min.js?ver=4.6.93') !!}"></script>
-<script type='text/javascript'
-	src="{!! asset('/js/renew/jquery.themepunch.revolution.min.js?ver=4.6.93') !!}"></script>
-<script type='text/javascript'
-	src="{!! asset('/js/renew/x-head.min.js?ver=4.0.4') !!}"></script>
-<script type='text/javascript'
-	src="{!! asset('/js/renew/cs-head.min.js?ver=1.0.3') !!}"></script>
+<script type='text/javascript'	src="{!! asset('/js/renew/jquery.js?ver=1.11.2') !!}"></script>
+<script type='text/javascript'	src="{!! asset('/js/renew/jquery-migrate.min.js?ver=1.2.1') !!}"></script>
+<script type='text/javascript'	src="{!! asset('/js/renew/jquery.themepunch.tools.min.js?ver=4.6.93') !!}"></script>
+<script type='text/javascript'	src="{!! asset('/js/renew/jquery.themepunch.revolution.min.js?ver=4.6.93') !!}"></script>
+<script type='text/javascript'	src="{!! asset('/js/renew/x-head.min.js?ver=4.0.4') !!}"></script>
+<script type='text/javascript'	src="{!! asset('/js/renew/cs-head.min.js?ver=1.0.3') !!}"></script>
 
-<link rel='canonical' href='http://www.rodafresh.com' />
-<link rel='shortlink' href='http://www.rodafresh.com' />
+<link rel='canonical' href='http://www.oalfaiate.com' />
+<link rel='shortlink' href='http://www.oalfaiate.com' />
 
 
 <meta property="og:site_name" content="">

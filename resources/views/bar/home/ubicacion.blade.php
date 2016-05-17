@@ -8,7 +8,7 @@
 			<span>Donde Estamos?</span>
 		</h2>
 
-		<div class="x-column x-sm x-1-1"
+		<div class="x-column x-sm x-1-1 eventtext"
 			style="background-color: #000000; padding-bottom: 40px; left: -3000px; margin-bottom: 20px;"
 			data-x-element="column"
 			data-x-params="{&quot;fade&quot;:true,&quot;animation&quot;:&quot;in-from-left&quot;}"

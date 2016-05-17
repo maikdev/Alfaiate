@@ -43,7 +43,7 @@ class HomeController extends Controller
     {
     	//$posts = Post::orderBy('created_at', 'desc')->paginate(5);
     
-    	$evento = Evento::orderBy('fecha_inicio', 'desc')->first();
+    	$eventos = Evento::orderBy('fecha_inicio', 'asc')->limit(3)->get();
 //     	return view('bar', [
 //     			'posts' => $posts,
 //     	]);
@@ -59,7 +59,9 @@ class HomeController extends Controller
     	
     	
     	$albumes = Album::where('publicar', 1)->limit(6)->get();
-    	
+    	$albumes->push(Album::where('publicar', 1)->first());
+    	$albumes->push(Album::where('publicar', 1)->first());
+    	$albumes->push(Album::where('publicar', 1)->first());
 
     	$fondo_multimedia = asset ( '/img/alfaiate_paredrevistas.jpg' );
     	
@@ -68,7 +70,7 @@ class HomeController extends Controller
     	//$tipo='elmaster  masthead-stacked';
     	$tipo='masthead-inline';
     	
-    	return view ( 'bar', compact ( 'tipo', 'title', 'evento','logo_image', 'fondo_image', 'logo_frase', 'fondo_ubicacion',
+    	return view ( 'bar', compact ( 'tipo', 'title', 'eventos','logo_image', 'fondo_image', 'logo_frase', 'fondo_ubicacion',
     			'fondo_eventos', 'albumes', 'fondo_multimedia' ) );
     }
     

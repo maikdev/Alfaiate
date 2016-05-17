@@ -19,13 +19,13 @@
 	
 	@include('bar.partials.animated_intro')
 		
-	@include('bar.eventos')	
+	@include('bar.home.eventos')	
 	
-	@include('bar.multimedia')
+	@include('bar.home.multimedia')
 	
-	@include('bar.ubicacion')
+	@include('bar.home.ubicacion')
 	
-	@include('bar.contacto') 
+	@include('bar.home.contacto') 
 
 @stop 
 

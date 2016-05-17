@@ -8,7 +8,7 @@
 @if(!is_null($evento->imagen))
 <hr class="x-gap" style="margin: 20px 0 0 0;">
 	<div class="x-video-inner">
-<img class="embed with-container" style="max-width: 400px; max-height: 500px"
+<img class="embed with-container eventos-image" 
 					src="{!! asset($evento->imagen) !!}"
 					frameborder="0" allowfullscreen></img>
 

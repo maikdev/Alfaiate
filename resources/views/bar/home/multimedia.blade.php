@@ -7,7 +7,7 @@
 	data-x-params='
 		{"type":"image","parallax":false}
 		'
-	style="background-image: url({!! $fondo_multimedia !!}); background-color: #f8f8f8; padding-top: 0px; padding-bottom: 190px;">
+	style="background-image: url({!! $fondo_multimedia !!}); background-color: #f8f8f8; padding-top: 0px; padding-bottom: 190px; background-position: 50% 0px;">
 
 	
 	<div class="x-container max width" style="margin-top: 100px; margin-bottom:20px">
@@ -30,7 +30,7 @@
 				<div class="jajajaja x-column x-sm x-1-3" style="">
 			@endif
 						
-			@include('bar/albumcontainer', $album)			
+			@include('bar.home.albumcontainer', $album)			
 				
 			</div>
 			
