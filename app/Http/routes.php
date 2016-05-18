@@ -40,7 +40,7 @@ Route::group(['middleware' => 'web'], function () {
 	// Authentication Routes...
 	Route::auth();
 
-    Route::get('/home', 'HomeController@index')->middleware(['auth']);
+    Route::get('/alfa', 'HomeController@logged')->middleware(['auth']);
     
     //Route::post('/store2', 'HomeController@store')->name('post.store2')->middleware(['auth']);
     

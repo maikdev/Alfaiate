@@ -29,9 +29,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function logged()
     {
-        return view('home');
+        return view('alfa_logged');
     }
     
     /**
